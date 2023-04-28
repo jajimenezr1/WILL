@@ -14,7 +14,15 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+let i = 0;
+  // Mientras queden elementos por comprobar en el array y el nombre del elemento actual no sea el nombre que buscamos, pasamos al elemento siguiente
+  while (i < amigos.length && amigos[i].nombre != nombre) {
+    i++;
+  }
+  // Si el motivo por el que se ha salido del array es porque no quedan elementos por comprobar devolver null (no se ha encontrado). En caso contrario devolver el elemento en la posición i (posición en la que se ha encontrado ele lemento)
+  if (i < amigos.length) {
+    return amigos[i];
+}
 }
 
 // No modifiques nada debajo de esta linea //
